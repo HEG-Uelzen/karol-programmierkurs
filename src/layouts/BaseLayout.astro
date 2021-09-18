@@ -1,0 +1,108 @@
+---
+import '../css/pico.min.css'
+import '../css/styles.css'
+
+const {title} = Astro.props;
+
+let {previous} = Astro.props;
+let {next} = Astro.props;
+---
+
+<html lang="de">
+  <head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.png" />
+    <title>{title} - Karol Programmierkurs</title>
+    <meta name="description" content="Robot Karol Programmierkurs" />
+  </head>
+  <body class="container">
+<nav class="container">
+  <ul>
+    <li>
+      <a href="/" aria-label="Index page"><img src="/images/karollogo.png" alt="Karol Logo" width="120" height="120" loading="lazy" /></a>
+    </li>
+    <li><strong>Karol - Programmierkurs</strong></li>
+  </ul>
+  <ul>
+    <li>
+      <a href={previous} aria-label="previous page">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M0 0h24v24H0z" stroke="none" />
+          <path d="m15 6-6 6 6 6" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href={next} aria-label="next page">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M0 0h24v24H0z" stroke="none" />
+          <path d="m9 6 6 6-6 6" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!--main content-->
+    <main class="container">
+    <h1>{title}</h1>
+      <!-- slot: your page content will be injected here. -->
+      <slot />
+    </main>
+
+<!--Footer-->
+<footer class="container">
+    <a href={previous} aria-label="previous page">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M0 0h24v24H0z" stroke="none" />
+        <path d="m15 6-6 6 6 6" />
+      </svg>
+    </a>
+    <a href={next} aria-label="next page">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M0 0h24v24H0z" stroke="none" />
+        <path d="m9 6 6 6-6 6" />
+      </svg>
+    </a>
+</footer>
+
+  </body>
+</html>

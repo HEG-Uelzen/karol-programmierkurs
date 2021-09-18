@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  iframe {
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 75%;
+  }
+}
+
+iframe {
+  margin-bottom: 0.8rem;
+}

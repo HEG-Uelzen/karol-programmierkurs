@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="1. Wir starten"
+  previous="/01-start"
+  next="/02-das-erste-programm"
+>
+  <p>
+    Wenn du das Programm <strong>Karol the robot</strong> startest, siehst du
+    folgenden Bildschirm:
+  </p>
+  <center>
+    <figure>
+      <img
+        src="/images/01_karol_bildschirm.gif"
+        alt=""
+        border="0"
+        width="777"
+        height="513"
+        loading="lazy"
+      />
+      <figcaption>Abbildung 1.1: Der erste Programm&shy;aufruf</figcaption>
+    </figure>
+  </center>
+
+  <p>
+    Nach dem &Ouml;ffnen der Programmier&shy;umgebung schaut man zuerst auf die
+    dargestellte drei&shy;dimensionale Welt und den klein&shy;en Roboter Karol.
+    Er wartet geduldig auf Befehle. Doch bevor ein erstes Programm entwickelt
+    wird, sollte man die Bewegungen von Karol kennen&shy;lernen.
+  </p>
+
+  <h2>Erste Schritte</h2>
+  Karol kann fern&shy;gesteuert werden. Mit den Pfeil&shy;tasten (Cursor-Tasten)
+  wird die Bewegung ge&shy;steuert:
+
+  <ul>
+    <li><b>Pfeil hoch:</b> Karol geht einen Schritt vorw&auml;rts</li>
+    <li><b>Pfeil runter:</b> Karol geht einen Schritt r&uuml;ckw&auml;rts</li>
+    <li>
+      <b>Pfeil links:</b> Karol dreht sich nach links (gegen den Uhrzeiger)
+    </li>
+    <li>
+      <b>Pfeil rechts:</b> Karol dreht sich nach rechts (mit dem Uhrzeiger)
+    </li>
+  </ul>
+
+  <div class="uebung">
+    <b>&Uuml;bung:</b>
+    Erkunde die Welt mit Karol und lasse ihn durch Fern&shy;steuern mit den
+    Pfeil&shy;tasten durch seine Welt laufen.
+  </div>
+
+  <div class="fallstrick">
+    <b>Hilfe:</b>
+    Was muss ich tun, wenn sich Karol nicht fernsteuern l&auml;sst?<br />
+    Wenn Karol nicht auf die Pfeil&shy;tasten reagiert, klickt man einmal mit
+    der linken Maus&shy;taste auf seine Welt.
+  </div>
+
+  <p>
+    Au&szlig;er Bewegen kann Karol noch mehr. Seine Welt ist nicht so leer, wie
+    sie jetzt noch scheint. Es gibt Gegenst&auml;nde, wie Ziegel und Quader, und
+    es gibt Marker, die Karol jeweils mani&shy;pulieren kann. Was genau die
+    Unter&shy;schiede sind, braucht an dieser Stelle nicht erl&auml;utert zu
+    werden.
+  </p>
+
+  <p>
+    Mit einem der folgenden Buchstaben werden die Gegenst&auml;nde manipuliert:
+  </p>
+
+  <ul>
+    <li><b>H:</b> legt einen Ziegel vor Karol ab</li>
+    <li><b>A:</b> nimmt den Ziegel vor Karol auf</li>
+    <li><b>M:</b> setzt einen Marker unter Karol oder entfernt einen Marker</li>
+    <li><b>Q:</b> legt einen Quader vor Karol ab</li>
+    <li><b>E:</b> nimmt einen Quader vor Karol auf</li>
+  </ul>
+
+  <center>
+    <figure>
+      <img
+        src="/images/01_karol_quader_ziegel_marker.gif"
+        alt=""
+        border="0"
+        width="332"
+        height="285"
+        loading="lazy"
+      />
+      <figcaption>
+        Ab&shy;bildung 1.2: Quader (grau), Ziegel (rot) und Marker (gelb)
+      </figcaption>
+    </figure>
+  </center>
+
+  <p>
+    Die Ansicht von Karols Welt kann auch in eine 2D-Darstellung ge&auml;ndert
+    werden. Hierzu w&auml;hlt man nur den entsprechenden Befehl im Menu unter
+    "Welt / 2D-Darstellung" aus oder dr&uuml;ckt die Taste <b>F5</b>. Einige
+    Auf&shy;gaben werden im Weiteren aufgrund der besseren
+    &Uuml;bersichtlichkeit in der 2D-Darstellung pr&auml;sentiert.
+  </p>
+
+  <center>
+    <figure>
+      <img
+        src="/images/04_2d_3d.png"
+        alt=""
+        border="0"
+        width="727"
+        height="521"
+        loading="lazy"
+      />
+      <figcaption>
+        Abbildung 1.3: Um&shy;schaltung zwischen der 3D- und 2D-Darstellung
+      </figcaption>
+    </figure>
+  </center>
+
+  <h2>Von Ziegeln, Quadern und Markern</h2>
+  Wie man schnell feststellt, kann Karol zwei Arten von Gegen&shy;st&auml;nden
+  bewegen: die Ziegel und die Quader. Ferner kann Karol Positionen
+  mark&shy;ieren.
+
+  <article>
+    <header><b>&Uuml;bung:</b></header>
+
+    Ex&shy;peri&shy;mentiere mit Ziegeln, Quadern und Markern und versuche die
+    Unter&shy;schiede fest&shy;zu&shy;stellen.
+  </article>
+
+  <p>
+    Wichtig ist an dieser Stelle die ersten Be&shy;obachtung&shy;en
+    fest&shy;zuhalten:
+  </p>
+
+  <ol>
+    <li>Karol kann mehrere Ziegel aufeinander stapeln, nicht aber Quader.</li>
+    <li>Karol kann Ziegel und Quader nicht &uuml;bereinander stapeln.</li>
+    <li>
+      Karol kann sich auf einen Ziegel stellen, nicht aber auf einen Quader.
+    </li>
+    <li>
+      Karol muss, um sich auf einen Stapel von zwei oder mehr Ziegeln zu
+      stellen, eine Treppe bauen.
+    </li>
+    <li>Karol kann seinen Standort mit einem Marker markieren.</li>
+    <li>Der Marker bleibt gesetzt auch wenn Karol einen Ziegel darauf legt.</li>
+    <li>Karol kann keinen Quader auf einen Marker legen.</li>
+  </ol>
+
+  <b>Tipp:</b><br />
+
+  <p>
+    Wenn die Welt voll mit Ziegel- und Quader&shy;m&uuml;ll ist und Karol keine
+    Lust hat, jeden Gegen&shy;stand einzeln aufzur&auml;umen, hilft ein Klick
+    auf den Knopf "L" unterhalb der Welt. Er l&ouml;scht die Welt von Karol und
+    f&uuml;hrt den Anfangs&shy;zustand zur&uuml;ck.
+  </p>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 1:</b></header>
+    <p>
+      Steuer Karol mit der Tastatur oder den Pfeil&shy;symbolen so, dass die
+      gesamte Welt am Boden mit Ziegeln aus&shy;gelegt ist.
+    </p>
+    <br />
+    <center>
+      <img
+        src="/images/aufgabe_01.png"
+        alt=""
+        border="0"
+        width="330"
+        height="285"
+        loading="lazy"
+      />
+    </center>
+  </article>
+</BaseLayout>

@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="7. Verschiedene Übungen"
+  previous="/06-eigene-bedingungen"
+  next="/"
+>
+  <p>
+    Jetzt hast du alles gelernt, was man mit Karol alles machen kann. Dazu
+    ers&shy;teinmal
+  </p>
+  <p>
+    <center>
+      <strong><i>"Herzlichen Gl&uuml;ckwunsch!!!"</i></strong>
+    </center>
+  </p>
+  <p>
+    Nutze das Wissen, um die nach&shy;folgenden Auf&shy;gaben zu l&ouml;sen. Die
+    Reihen&shy;folge dieser Auf&shy;gaben ist dir frei&shy;gestellt.
+  </p>
+  <br />
+  <article>
+    <header><b>Aufgabe 11:</b></header>
+    <p>
+      Robot Karol soll in einer leer&shy;en Welt (Gr&ouml;&szlig;e 10x10; im
+      Menu einzustellen unter "Welt / Neue Welt") eine Burg errichten (s.u.).
+      Benutze hierf&uuml;r sinn&shy;volle An&shy;weisungen (z.B.
+      <kbd>baueTurm</kbd>).<br />
+      Einen <b>dicken Bonus&shy;punkt</b> bekommst du, wenn du es schaffst, dass
+      Karol beliebig gro&szlig;e Burgen bauen kann (abh&auml;ngig von der
+      Gr&ouml;&szlig;e der Welt).
+    </p>
+    <br />
+
+    <center>
+      <img
+        src="/images/12_burgbauer.png"
+        alt=""
+        border="0"
+        width="488"
+        height="304"
+        loading="lazy"
+      />
+    </center>
+    <br />
+    <center>
+      <img
+        src="/images/12_burgbauer2d.png"
+        alt=""
+        border="0"
+        width="330"
+        height="327"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 12:</b></header>
+    <p>
+      Robot Karol soll einen Burg&shy;wall ablaufen, ohne herunter&shy;zufallen.
+      Da&shy;zu muss er bei jedem Schritt pr&uuml;fen, in welche Richtung es
+      weiter geht. Zur Sicher&shy;heit vor einem eventuellen &Uuml;berfall soll
+      er hinter sich die Trep&shy;pe ab&shy;bauen.
+    </p>
+    <p>
+      Lasse Robot Karol in einer Endlos&shy;schleife den Burg&shy;wall ablaufen.
+      Teste das Programm mit ver&shy;schiedenen Burgw&auml;llen.
+    </p>
+    <section>
+      <p><b>Tipp:</b> Endlos&shy;schleifen formuliert man einfach wie folgt:</p>
+      <pre>
+            <code>
+            Wiederhole immer<br/>
+            &nbsp; &nbsp; &lt;Anweisungen&gt;<br/>
+            *Wiederhole<br/>
+            </code>                   
+            </pre>
+    </section>
+
+    <br />
+
+    <ul>
+      <li><a href="./welten/burgwall.kdw">Burgwall</a></li>
+    </ul>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/11_burgwaechter.png"
+        alt=""
+        border="0"
+        width="400"
+        height="370"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 13:</b></header>
+    <p>
+      Robot Karol soll im Laby&shy;rinth einer Pyra&shy;mide einen
+      Gold&shy;schatz suchen. Dazu muss er vor jedem Schritt pr&uuml;fen, wie es
+      weiter geht. Leider muss Karol erst den zu&shy;gemauerten Ein&shy;gang der
+      Pyra&shy;mide &ouml;ffnen. Er wei&szlig; nicht, wie dick und wie hoch die
+      Mauer ist.
+    </p>
+    <p>
+      Lasse Robot Karol das Laby&shy;rinth nach dem Schatz (Marke) ab&shy;suchen
+      und diesen aufnehmen. Teste das Pro&shy;gramm mit ver&shy;schiedenen
+      Labyrinth&shy;en.
+    </p>
+
+    <ul>
+      <li><a href="./welten/labyrinth.kdw">Laby&shy;rinth</a></li>
+    </ul>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/13_pharaonen.png"
+        alt=""
+        border="0"
+        width="474"
+        height="471"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 14:</b></header>
+    <p>
+      Robot Karol befindet sich in einem Abwasser&shy;kanal mit zahl&shy;reichen
+      Neben&shy;armen. Einige davon haben sich im Laufe der Zeit mit Schmutz
+      (Marke) zu&shy;gesetzt. Karol hat die Auf&shy;gabe, sie zu reinigen.
+      Anschlie&szlig;end soll er sich wieder zu seinem Aus&shy;gangs&shy;punkt
+      begeben.
+    </p>
+    <p>
+      Formuliere eine Beding&shy;ung, mit der Robot Karol pr&uuml;fen kann, ob
+      zwei Pl&auml;tze rechts neben ihm ein Kanal beginnt.
+    </p>
+    <p>
+      Entwickele ein gut struktur&shy;iertes Programm. Lager Teil&shy;probleme
+      in Unter&shy;programme aus und teste das Programm in verschieden
+      gestalteten und unter&shy;schiedlich stark ver&shy;schmutzten
+      Kanal&shy;isationen.
+    </p>
+
+    <ul>
+      <li><a href="./welten/kanalisation.kdw">Kanalisation</a></li>
+    </ul>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/14_kanalisation.png"
+        alt=""
+        border="0"
+        width="600"
+        height="322"
+        loading="lazy"
+      />
+    </center>
+  </article>
+</BaseLayout>

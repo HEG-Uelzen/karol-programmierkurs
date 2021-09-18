@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout
+  title="4. Anweisungen"
+  previous="/03-schleifen"
+  next="/05-bedingungen"
+>
+  <p>
+    Bei den Befehlen von Karol scheinen einige Anweisungen zu fehlen. So
+    w&auml;re es doch sehr praktisch, wenn sich Karol einmal umdrehen (Drehung
+    um 180 Grad) k&ouml;nnte. Im Prinzip kann Karol sich auch umdrehen, indem er
+    den Befehl "LinksDrehen" (oder "RechtsDrehen") zweimal hintereinander
+    ausf&uuml;hrt. Aber Karol neue An&shy;weisungen "beizubringen", w&auml;re
+    sicherliche die elegant&shy;ere Art.
+  </p>
+  <p>
+    Um Karol eine neue Anweisung beizu&shy;bringen, muss man diese
+    <b>vor</b> das Haupt&shy;programm in folgende Form aufschreiben:
+  </p>
+
+  <pre>
+  <code>
+  Anweisung &lt;Name&gt;<br/>
+  &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
+  *Anweisung<br/>
+  </code>
+  </pre>
+  <p>
+    Die neue Anweisung kann dann durch Aufrufen ihres Namens benutzt werden. Mit
+    den Befehlen <kbd>Schnell</kbd> und <kbd>Langsam</kbd> entfernt man die
+    Verz&ouml;gerung zwischen den einzelnen Anweisungs&shy;schritten. Die
+    Anweisung wirkt dann "wie aus einem Guss".
+  </p>
+
+  <pre>
+  <code>
+  Anweisung umdrehen<br/>
+  &nbsp; &nbsp; Schnell<br/> 
+  &nbsp; &nbsp; LinksDrehen<br/>
+  &nbsp; &nbsp; LinksDrehen<br/>
+  &nbsp; &nbsp; Langsam<br/>	 
+  *Anweisung<br/>	 
+  </code>
+  </pre>
+
+  <article>
+    <header>
+      <b>&Uuml;bung:</b>
+    </header>
+
+    <p>
+      Das Notieren einer An&shy;weisung selbst bewirkt noch keine
+      Ver&auml;nderung von Karol. Erst durch den Aufruf der neuen An&shy;weisung
+      dreht sich Karol um. Probiere folgend&shy;en Programm&shy;code selbst
+      einmal aus.
+    </p>
+
+    <pre>
+    <code>
+    Anweisung umdrehen<br/>
+    &nbsp; &nbsp; Schnell<br/>
+    &nbsp; &nbsp; LinksDrehen<br/>
+    &nbsp; &nbsp; LinksDrehen<br/>
+    &nbsp; &nbsp; Langsam<br/>
+    *Anweisung<br/>
+    <br/>
+    umdrehen<br/>
+    </code>
+    </pre>
+  </article>
+
+  <br /><br /><br />
+
+  <article>
+    <header>
+      <b>Aufgabe 4:</b>
+    </header>
+    <p>
+      F&uuml;lle nachfolgende An&shy;weisungen mit passendem Programm&shy;code
+      aus. Du kannst den unten stehenden Programm&shy;code mit Copy &amp; Paste
+      in den Karol-Editor &uuml;bernehmen.
+    </p>
+
+  <pre>
+    <code>
+    &#123; Karol soll sich einmal umdrehen &#125;<br/>
+    Anweisung umdrehen<br/>
+    <br/>
+    *Anweisung<br/>	
+    <br/>
+    <br/>
+    &#123; Karol soll einen Schritt nach links machen,<br />
+     die Blickrichtung soll aber unver&auml;ndert bleiben.<br />
+    Anweisung SchrittLinks &#125;<br/>
+    <br/>
+    *Anweisung<br/>
+    <br/>
+    <br/>
+    &#123; Karol soll einen Schritt nach rechts machen,<br />
+     die Blickrichtung soll aber unver&auml;ndert bleiben. &#125;<br />
+    Anweisung SchrittRechts<br/>
+    <br/>
+    *Anweisung<br/>
+    <br/>
+    <br/>
+    &#123; Karol soll einen Schritt zur&uuml;ck machen,<br />
+     die Blickrichtung soll aber unver&auml;ndert bleiben.&#125;<br />
+    Anweisung SchrittZurueck<br/>
+    <br/>
+    *Anweisung<br/>	 	 
+   </code>
+  </pre>
+  </article>
+
+  <br /><br /><br />
+
+  <article>
+    <header><b>Aufgabe 5:</b></header>
+    <p>
+      Robot Karol arbeitet in einer B&uuml;cherei. Er soll in jedes Fach eines
+      Regals genau ein Buch legen und sich dann in seine Ausgangs&shy;position
+      begeben. Schreibe ein Programm f&uuml;r dieses Problem. Benutze die in
+      <b>Aufgabe 4</b> neu definierten Anweisungen.
+    </p>
+    <br />
+    <center>
+      <img
+        src="/images/04_buecherei.png"
+        alt=""
+        border="0"
+        width="403"
+        height="405"
+        loading="lazy"
+      />
+    </center>
+  </article>
+</BaseLayout>

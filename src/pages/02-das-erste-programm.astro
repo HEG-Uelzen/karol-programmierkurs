@@ -1,0 +1,503 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="2. Karol horcht auf Befehle"
+  previous="/01-start"
+  next="/03-schleifen"
+>
+  <p>
+    Nun w&auml;re es doch sehr aufwendig, wenn jeder Robotor von einem Menschen
+    gesteuert werden m&uuml;sste. Deshalb soll Karol im n&auml;chsten Schritt
+    lernen, selbstst&auml;ndig in der Welt zu agieren.
+  </p>
+  <p>
+    Alle Befehle werden im Editor links oben eingegeben. So entsteht ein
+    Programm. Dies ist nichts anderes als Befehle, die in einer bestimmten
+    Reihenfolge ausgef&uuml;hrt werden. Die Befehle werden von oben nach unten
+    abgearbeitet. Der Befehl ganz oben im Programm wird als erstes beachtet.
+    Erst wenn er vollst&auml;ndig und ohne Fehler ausgef&uuml;hrt werden kann,
+    kommt der n&auml;chste Befehl darunter an die Reihe. Anhand eines ersten
+    einfachen Beispiels soll sich Karol nach vorn bewegen.
+  </p>
+
+  <p>
+    Soweit noch nicht geschehen sollte man an dieser Stelle die Welt von Karol
+    in den Anfangszustand zur&uuml;cksetzen. Dazu klickt man mit der linken
+    Maustaste auf die Welt und anschlie&szlig;end dr&uuml;ckt man den Knopf "L"
+    unterhalb der Welt. Alternativ findet man im Men&uuml; Welt den Eintrag Welt
+    l&ouml;schen. Im Editor links gibt man das Wort "Schritt" ein. Hierbei
+    handelt es sich um eine Anweisung, die im Folgenden so dargestellt wird:
+  </p>
+
+  <pre>
+			<code>Schritt</code>
+			</pre
+  >
+
+  <p>Im Editor sieht das dann folgenderma&szlig;en aus:</p>
+  <center>
+    <img
+      src="/images/03_befehle_eingeben.png"
+      alt=""
+      border="0"
+      width="775"
+      height="652"
+      loading="lazy"
+    />
+  </center>
+  <br />
+
+  <hgroup>
+    <h2>Anweisung</h2>
+    <h3>Eine Anweisung ist ein Befehl an Karol etwas zu tun.</h3>
+  </hgroup>
+
+  <section>
+    <p>
+      Anschlie&szlig;end dr&uuml;ckt man die Zeilen&shy;vorschubtaste ("ENTER")
+      um eine neue Zeile zu beginnen und schreibt abermals
+      <kbd> Schritt </kbd>
+      .
+    </p>
+    <p>
+      Das wiederholt man noch zweimal, so dass das erste Programm wie folgt
+      aussieht:
+    </p>
+  </section>
+
+  <pre>
+  <code>Schritt
+  Schritt
+  Schritt
+  Schritt
+  </code>
+  </pre>
+
+  <p>
+    Um das Programm zu starten klickt man auf den Knopf "Programm&shy;start"
+    (das ist das blaue Drei&shy;eck, das mit einer Spitze nach rechts zeigt, s.
+    nachfolgende Ab&shy;bildung) oder die Funktions&shy;taste "F9". Karol sollte
+    nun z&uuml;gig vier Schritte nach vorn gehen.
+  </p>
+
+  <center>
+    <figure>
+      <img
+        src="/images/01_steuerung_des_programmablaufs.gif"
+        alt=""
+        border="0"
+        width="425"
+        height="257"
+        loading="lazy"
+      />
+      <figcaption>
+        Abbildung 2.1: Funktionen zur Steuerung des Programmablaufs
+      </figcaption>
+    </figure>
+  </center>
+
+  <p>
+    Ging das zu schnell? Kein Problem: Der Programm&shy;ablauf kann als
+    Einzel&shy;schritt besser nachvollzogen werden. Ent&shy;weder man klickt auf
+    den Knopf "Einzel&shy;schritt" unterhalb des Editors oder man benutzt die
+    Funktions&shy;taste "F7". Nun passiert folgendes: beim ersten
+    Tasten&shy;druck wird im Editor die aktuelle Programm&shy;zeile links mit
+    einem blauen Pfeil markiert. Dr&uuml;ckt man "F7" erneut wird der Befehl
+  </p>
+
+  <pre>
+	<code>Schritt<br/></code>
+	</pre>
+
+  <p>
+    bearbeitet; Karol geht einen Schritt nach vorn. Automatisch wird nun die
+    n&auml;chste Zeile mit dem blauen Pfeil markiert. Der n&auml;chste
+    Einzel&shy;schritt l&auml;sst Karol wieder nach vorn gehen und so weiter.
+  </p>
+
+  <article>
+    <header>
+      <mark><b>&Uuml;bung:</b></mark>
+    </header>
+    F&uuml;hre das Programm mehrmals hintereinander aus ohne jeweils die Welt zu
+    l&ouml;schen. Was passiert?
+  </article>
+
+  <p>
+    Nach mehrmaligem Programm&shy;start passiert es unweigerlich: Karol rennt
+    vor die Wand. Auch wenn es ihm nicht weh tut so ist dies doch ein grober
+    Fehler im Programm. Dies muss unbedingt vermieden werden. Wie? Das wird
+    sp&auml;ter erkl&auml;rt. An dieser Stelle wird nur auf zwei Neuigkeiten
+    verwiesen, die einen solchen Fehler anzeigen. Zum Einen ist im Bereich
+    Information unten rechts zu lesen:
+  </p>
+
+  <pre>			
+			<code>[Abbruch] [Zeile 2]: Karol ist an die Wand angesto&szlig;en</code>
+			</pre>
+
+  <p>
+    Geleich&shy;zeitig erscheint im Editor in der zweiten Zeile das Symbol
+    "Daumen nach unten". Dies ist hilf&shy;reich bei der Suche nach Fehlern. Der
+    Programm&shy;ierer erkennt hier auf einen Blick, dass das Programm auf
+    un&shy;erwartete Weise beendet wurde. "Unerwartet" ist das deshalb, weil der
+    Programm&shy;ierer im Programm keine Kontrolle vorgesehen hat, um diesen
+    Fehler aufzusp&uuml;ren und Karol entsprechend reagieren zu lassen. Durch
+    die Angabe der Zeilen&shy;nummer erkennt der Programm&shy;ierer gleich, an
+    welcher Stelle er m&ouml;glicherweise falsch programmiert hat. Doch bereits
+    an diesem einfachen Beispiel muss man feststellen, dass es (fast) nur
+    zuf&auml;llig ist, an welcher Zeile im obigen Programm der Ab&shy;bruch
+    erfolgt. Man wird bald selbst die Erfahrung machen, dass Angaben &uuml;ber
+    Fehler im Programm nicht immer genau stimmen. Sie geben lediglich einen
+    Hinweis darauf, wo man mit der Fehler&shy;suche beginnen sollte.
+  </p>
+
+  <h3>Was gibt es au&szlig;er Anweisungen noch?</h3>
+
+  <p>
+    Die Anweisung gibt Karol den Befehl etwas zu tun. Daneben gibt es noch zwei
+    weitere Kategorien, die hier nur der Vollst&auml;ndigkeit halber kurz
+    vorgestellt werden sollen.
+  </p>
+
+  <h3>Kontrollstrukturen</h3>
+  <p>
+    Die Kontroll&shy;strukturen sollen den Ablauf eines Programms steuern. Es
+    soll kontrolliert ablaufen. Die Vorgaben daf&uuml;r setzt ent&shy;weder der
+    Programm&shy;ierer (zum Beispiel eine Anweisung 10 mal hinter&shy;einander
+    auszuf&uuml;hren) oder die Umwelt von Karol (zum Beispiel die Anweisung an
+    Karol sich zu drehen, wenn er vor einer Wand steht).
+  </p>
+
+  <h3>Bedingungen (oder auch Zust&auml;nde)</h3>
+  <p>
+    &Uuml;ber die vordefinierten Bedingungen kann der Programm&shy;ierer etwas
+    &uuml;ber Karols Umwelt w&auml;hrend der Programm&shy;ausf&uuml;hrung
+    erfahren. Sie verraten zum Beispiel, ob Karol vor einer Wand steht oder vor
+    ihm ein Ziegel liegt.
+  </p>
+
+  Welche An&shy;weisungen, Kontroll&shy;strukturen und Beding&shy;ungen Karol
+  kennt wird im Verlauf des Buch&shy;es gezeigt.
+
+  <h3>Schreibweise / Syntax</h3>
+  <p>
+    Bei jeder Programm&shy;ierung muss sich der Programm&shy;ierer an eine
+    Syntax halten. Damit ist die Regel gemeint nach der zum Bei&shy;spiel
+    An&shy;weisungen eingegeben werden m&uuml;ssen damit die
+    Programmier&shy;um&shy;gebung diese Anweisung korrekt umsetzen kann. Die
+    Syntax zu lernen geh&ouml;rt zum wichtigsten Handwerks&shy;zeug des
+    Programm&shy;ierers.
+  </p>
+  <p>
+    Die Programmier&shy;umgebung Robot Karol macht es dem
+    Programmier&shy;anf&auml;nger leicht. Es ist lediglich auf Folgendes immer
+    zu achten:
+  </p>
+  <article>
+    <p>
+      S&auml;mtliche Befehle m&uuml;ssen korrekt geschrieben werden. Gro&szlig;-
+      und Klein&shy;schreibung wird nicht unterschieden
+    </p>
+
+    <p>
+      <del><b>falsch</b></del
+      ><br />
+      <kbd> Schrit </kbd>
+    </p>
+
+    <p>
+      <ins><b>richtig</b></ins
+      ><br />
+      <kbd> SChRitt </kbd>
+    </p>
+
+    <p>
+      <ins
+        ><u><b>besser</b></u></ins
+      ><br />
+      <kbd> Schritt </kbd>
+    </p>
+  </article>
+
+  <article>
+    <p>
+      Alle Befehle m&uuml;ssen zumindest von einem Leer&shy;zeichen getrennt
+      sein
+    </p>
+
+    <p>
+      <del><b>falsch</b></del
+      ><br />
+      <kbd> SchrittSchritt </kbd>
+    </p>
+
+    <p>
+      <ins><b>richtig</b></ins
+      ><br />
+      <kbd> Schritt Schritt<br /> </kbd>
+    </p>
+
+    <p>
+      <ins
+        ><u><b>besser</b></u></ins
+      >
+      <br />
+      <kbd>
+        Schritt<br />
+        Schritt
+      </kbd>
+    </p>
+  </article>
+
+  <article>
+    <p>
+      Darf man einem Befehl einen Parameter &uuml;ber&shy;geben, wird dieser in
+      runden Klammern angegeben
+    </p>
+
+    <p>
+      <del><b>falsch</b></del
+      ><br />
+      <kbd> Warten[1000] </kbd>
+    </p>
+
+    <p>
+      <ins><b>richtig</b></ins
+      ><br />
+      <kbd> Warten (1000)<br /> </kbd>
+    </p>
+
+    <p>
+      <ins
+        ><u><b>besser</b></u></ins
+      ><br />
+      <kbd> Warten(1000) </kbd>
+    </p>
+  </article>
+
+  <h2>Die Anweisungen im Einzelnen</h2>
+  <p>
+    Im Folgenden werden die An&shy;weisungen anhand kurzer Bei&shy;spiele
+    vorstellt. Es ist empfehlenswert, wenn du vor jedem Er&shy;stellen eines
+    neuen Pro&shy;gramms die Welt l&ouml;schst. Es gibt eine Reihe von
+    An&shy;weisungen, die du nicht alle aus&shy;wendig k&ouml;nnen musst.
+    Viel&shy;mehr soll dir an&shy;fangs nur ge&shy;zeigt werden, was denn
+    m&ouml;glich ist.
+  </p>
+
+  <h3>Schritt</h3>
+  <p>
+    Mit der Anweisung
+    <kbd>Schritt</kbd>
+    geht Karol einen Schritt nach vorn. Karol kann sich nicht zur Seite und
+    nicht r&uuml;ck&shy;w&auml;rts bewegen (auch wenn letzt&shy;genanntes mit
+    den Cursor&shy;tasten m&ouml;glich ist).
+  </p>
+
+  <article><b>Merke:</b> Karol geht immer in Blick&shy;richtung!</article>
+
+  <h3>LinksDrehen</h3>
+  <p>
+    Mit der Anweisung
+
+    <kbd>LinksDrehen</kbd>
+
+    dreht sich Karol um 90 Grad nach links (gegen den Uhr&shy;zeiger).
+  </p>
+
+  <h3>RechtsDrehen</h3>
+  <p>
+    Mit der Anweisung
+
+    <kbd>RechtsDrehen</kbd>
+
+    dreht sich Karol um 90 Grad nach rechts (mit dem Uhr&shy;zeiger).
+  </p>
+
+  <h3>Hinlegen</h3>
+  <p>
+    Bei der Anweisung <kbd>Hinlegen</kbd> legt Karol einen Ziegel vor sich ab.
+  </p>
+
+  <p>
+    <kbd> Hinlegen(Anzahl) </kbd>
+    legt Anzahl Ziegel ab. Zum Beispiel legt Karol bei
+    <kbd> Hinlegen(3) </kbd>
+    3 Ziegel vor sich ab.
+  </p>
+
+  <article>
+    <header>
+      <mark><b>&Uuml;bung:</b></mark>
+    </header>
+    <p>
+      Was passiert, wenn Karol einen Ziegel ablegen soll und an dieser Stelle
+      schon ein Ziegel liegt?
+    </p>
+  </article>
+
+  <p>
+    Liegt bereits eine bestimmte Menge Ziegel vor Karol f&uuml;r die Anweisung
+    Hinlegen, f&uuml;gt Karol einen weiteren Ziegel hinzu (addiert).
+  </p>
+
+  <article>
+    <header>
+      <mark><b>&Uuml;bung:</b></mark>
+    </header>
+    <p>Was passiert, wenn Karol 100 Ziegel vor sich ablegen soll?</p>
+  </article>
+  <p>
+    Es ist m&ouml;glich, dass Karol einen Programm&shy;abbruch herbeif&uuml;hrt,
+    wenn er zu viele Ziegel auf einen Stapel legen soll. Die Anzahl
+    m&ouml;glicher Ziegel auf einem Feld ist durch die H&ouml;he der Welt
+    vorgegeben. Meist liegt diese H&ouml;he bei einem Wert von 6, was bedeutet,
+    dass Karol 6 Ziegel auf einem Feld stapeln kann. Soll ein 7. Ziegel
+    hinzugef&uuml;gt werden, bricht das Programm mit der Meldung ab "Maximale
+    Stapelh&ouml;he erreicht". Beim Erstellen einer neuen Welt kann der Wert
+    f&uuml;r die H&ouml;he auf maximal 10 gesetzt werden.
+  </p>
+  <article>
+    <p>
+      Soll Karol auf einem Feld mehr Ziegel ablegen als die maximale H&ouml;he
+      erlaubt, wird die maximale Menge an Ziegeln abgelegt und erst dann das
+      Programm beendet.
+    </p>
+  </article>
+
+  <h3>Aufheben</h3>
+  <p>
+    Durch
+    <kbd> Aufheben </kbd>
+    wird Karol angewiesen einen Ziegel vor sich aufzunehmen.
+    <kbd> Aufheben(Anzahl) </kbd>
+    f&uuml;hrt dazu, dass Karol Anzahl Ziegel aufhebt.
+  </p>
+  <article>
+    <header>
+      <mark><b>&Uuml;bung:</b></mark>
+    </header>
+    <p>
+      Was passiert, wenn Karol mehr Ziegel aufheben soll als vor ihm liegen?
+    </p>
+  </article>
+  <p>
+    Karol ist sehr genau in der Bearbeitung der Anweisungen die er erh&auml;lt!
+    Wenn er eine Anzahl Ziegel aufheben soll, die gar nicht vor ihm liegt
+    quittiert er dies mit einem Programm&shy;abbruch!
+  </p>
+
+  <div class="markant">
+    Liegt vor Karol ein Ziegel und die Anweisung verlangt, dass er zwei Ziegel
+    aufheben soll, so nimmt er einen Ziegel auf und bricht dann die
+    Ausf&uuml;hrung des Programms ab.
+  </div>
+
+  <h3>MarkeSetzen</h3>
+  <p>
+    Die Anweisung
+    <kbd> MarkeSetzen </kbd>
+    markiert das Feld auf dem Karol steht.
+  </p>
+
+  <article>
+    <header>
+      <mark><b>&Uuml;bung:</b></mark>
+    </header>
+    Was passiert, wenn Karol ein Feld markieren soll, das bereits markiert ist?
+  </article>
+
+  Das Programm k&ouml;nnte so aussehen:
+  <pre>
+			<code>
+                MarkeSetzen<br/>
+                MarkeSetzen
+            </code>		
+			</pre>
+
+  <p>
+    Nach dem Programm&shy;start markiert Karol das Feld unter sich.
+    Anschlie&szlig;end markiert er es erneut, was im Ergebnis zu keiner
+    Ver&auml;nderung f&uuml;hrt.
+  </p>
+
+  <h3>MarkeL&ouml;schen</h3>
+  <p>Mit</p>
+  <code> MarkeL&ouml;schen </code>
+  <p>
+    wird das markierte Feld unter Karol wieder als nicht markiert
+    gekenn&shy;zeichnet. Ist das Feld unter Karol nicht markiert, wird die
+    Anweisung dennoch ausgef&uuml;hrt. Es kommt nicht zu einem
+    Programm&shy;abbruch.
+  </p>
+
+  <h3>Kommentar</h3>
+  <p>Mit</p>
+  <pre>
+				<code>&#123; Dies ist ein beliebiger Kommentar &#125;</code>		
+			</pre>
+  <p>
+    passiert f&uuml;r Karol gar nichts. Der Programm&shy;ierer sollte sie aber
+    verwenden, um den Programmcode zu strukturieren und zu erl&auml;utern. Viele
+    Programm&shy;ierer vermeiden anfangs Kommentare, da sie zus&auml;tzlichen
+    Aufwand bedeuten. Je umfangreicher ein Programm ist, desto wichtiger sind
+    aber die Kommentare.
+  </p>
+
+  <h3>Kontextmenu</h3>
+  <p>
+    Um sich alle m&ouml;glichen Befehle, die Karol versteht, anzeigen zu lassen,
+    reicht es das Kontextmen&uuml; (mit der rechten Maustaste im Editor)
+    aufzurufen. Somit kannst du dir immer wieder alle Befehle ins
+    Ged&auml;chtnis rufen.
+  </p>
+
+  <center>
+    <img
+      src="/images/02_kontextmenu_befehle.png"
+      alt=""
+      border="0"
+      width="588"
+      height="522"
+      loading="lazy"
+    />
+  </center>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 2:</b><br /></header>
+    <p>
+      Schreibe ein Programm, dass nach dem einmaligen Ausf&uuml;hren in einer
+      <b>neuen</b> Welt den gesamten Boden mit Ziegeln bedeckt. Der Ort an dem
+      Karol zum Stehen kommt, ist unwichtig.
+    </p>
+    <br />
+    <center>
+      <img
+        src="/images/aufgabe_01.png"
+        alt=""
+        border="0"
+        width="330"
+        height="285"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <!-- Einbindung des Youtube-Videos -->
+  <center>
+    <iframe title="YouTube Video" loading="lazy" width="700" height="394" src="https://www.youtube.com/embed/ngndgqTAlwI" frameborder="0" allowfullscreen></iframe>
+    <p>
+      <i
+        >Das Video kann zu Hause angeschaut werden (dann mit Ton), muss aber
+        nicht.</i
+      >
+    </p>
+  </center>
+</BaseLayout>

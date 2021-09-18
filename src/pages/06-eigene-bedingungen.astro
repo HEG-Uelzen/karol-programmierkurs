@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="6. Eigene Bedingungen"
+  previous="/05-bedingungen"
+  next="/07-verschiedene-uebungen"
+>
+  <p>
+    F&uuml;r einige Probleme ist es hilf&shy;reich, wenn Karol nicht nur
+    &uuml;berpr&uuml;fen kann, ob ein Ziegel (oder Wand) vor ihm, sondern neben
+    oder hinter ihm liegt. F&uuml;r diese F&auml;lle ist es m&ouml;glich, Karol
+    neue Bedingung&shy;en beizu&shy;bringen.
+  </p>
+  <p>
+    Auch diese m&uuml;ssen wie die An&shy;weisung ganz oben im Programm&shy;code
+    stehen.
+  </p>
+  <p>Probiere folgenden Programm&shy;code aus:</p>
+
+  <article>
+    <header><b>&Uuml;bung:</b></header>
+    <section>
+      <p>Probiere folgenden Programm&shy;code aus:</p>
+
+      <pre>
+        <code>
+        Bedingung istZiegelRechts<br/>
+        &nbsp; &nbsp; schnell<br/>
+        &nbsp; &nbsp; // Karol dreht sich nach rechts, um in die Richtung<br/>
+        &nbsp; &nbsp; // &uuml;berpr&uuml;fen zu k&ouml;nnen.<br/>
+        &nbsp; &nbsp; rechtsdrehen<br/>
+        &nbsp; &nbsp; wenn istZiegel dann<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp; Wahr<br/>
+        &nbsp; &nbsp; sonst<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp; Falsch<br/>
+        &nbsp; &nbsp; *wenn<br/>
+        &nbsp; &nbsp; // Nach getaner Arbeit sollte sich Karol wieder<br/>
+        &nbsp; &nbsp; // zur&uuml;ckdrehen, damit er seine<br/>
+        &nbsp; &nbsp; // anf&auml;ngliche Blickrichtung wiedererlangt.<br/>
+        &nbsp; &nbsp; linksdrehen<br/>
+        &nbsp; &nbsp; langsam<br/>
+        *Bedingung<br/>
+        <br/>
+        solange istZiegelRechts tue<br/>
+        &nbsp; &nbsp; Schritt<br/>
+        *solange<br/>
+        rechtsDrehen<br/>
+        Schritt<br/>
+        Schritt<br/>
+        </code>
+      </pre>
+    </section>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/06_luecke_in_ziegelwand.png"
+        alt=""
+        border="0"
+        width="418"
+        height="557"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <div class="fallstrick">
+    <b>Achtung:</b>
+    <p>
+      Stelle beim Erstellen eigener Bedingung&shy;en sicher, dass Robot Karols
+      Ausgangs&shy;position nach dem Pr&uuml;fen wieder hergestellt wird.<br />
+      Bei dem Codebeispiel oben wird also erst eine Linksdrehung vollzogen, um
+      zu schauen, was links von Karol ist. Anschlie&szlig;end dreht sich Karol
+      wieder in die andere Richtung (also rechts herum).
+    </p>
+  </div>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 9:</b></header>
+    <p>
+      Der Meister hat in der Maschinen&shy;halle sein Handy verloren. Robot
+      Karol soll es suchen und einstecken. Auf der Suche stehen ihm jedoch immer
+      wieder Maschinen im Weg.
+    </p>
+    <p>
+      Robot Karol muss also ent&shy;weder eine Maschine um&shy;gehen oder
+      einfach einen Schritt vorw&auml;rts gehen. Hierbei muss er aber jetzt
+      beachten, dass die Maschinen unter&shy;schiedlich <b>breit</b> sind.
+      Schreibe ein Programm, das Robot Karol das Handy finden l&auml;sst.
+      Verwende Programm&shy;schleifen und eigene Anweisungen (z.B. f&uuml;r das
+      Umgehen eines Hindernisses). Variiere das Aussehen der
+      Maschinen&shy;halle.
+    </p>
+    <section>
+      <p>
+        <b>Tipp:</b> Wahr&shy;scheinlich muss nur die selbst&shy;definierte
+        Anweisung zum Um&shy;gehen einer Maschine angepasst werden. Definiere
+        nachfolgende Be&shy;dingung und binde sie in deinen Programm&shy;code
+        ein.
+      </p>
+
+      <pre>
+        <code>
+        Bedingung istZiegelRechts<br/>
+        &nbsp; &nbsp; schnell<br/>
+        &nbsp; &nbsp; ...<br/>
+        &nbsp; &nbsp; langsam<br/>
+        *Bedingung<br/>
+        </code>
+    </pre>
+    </section>
+
+    <br />
+    <p>Teste dein Programm mit folgenden drei Welten:</p>
+    <ul>
+      <li>
+        <a href="./welten/maschinenhalle_komplex_1.kdw"
+          >maschinenhalle_komplex_1</a
+        >
+      </li>
+      <li>
+        <a href="./welten/maschinenhalle_komplex_2.kdw"
+          >maschinenhalle_komplex_2</a
+        >
+      </li>
+      <li>
+        <a href="./welten/maschinenhalle_komplex_3.kdw"
+          >maschinenhalle_komplex_3</a
+        >
+      </li>
+    </ul>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/09_maschinenhalle_komplex.png"
+        alt=""
+        border="0"
+        width="400"
+        height="370"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 10:</b></header>
+    <p>
+      Der Meister hat in der Maschinen&shy;halle sein Handy verloren. Robot
+      Karol soll es suchen und einstecken. Auf der Suche stehen ihm jedoch immer
+      wieder Ma&shy;schinen im Weg.
+    </p>
+    <p>
+      Robot Karol muss also ent&shy;weder eine Ma&shy;schine umgehen oder
+      einfach einen Schritt vorw&auml;rts gehen. Hierbei muss er aber jetzt
+      beachten, dass die Maschinen unter&shy;schiedlich <b>breit</b> und
+      <b>lang</b> sind. Schreibe ein Programm, das Robot Karol das Handy finden
+      l&auml;sst. Verwende Programm&shy;schleifen und eigene An&shy;weisungen
+      (z.B. f&uuml;r das Umgehen eines Hinder&shy;nisses). Variiere das
+      Aus&shy;sehen der Maschinen&shy;halle.
+    </p>
+    <p>
+      <b>Tipp:</b> Wahrscheinlich muss nur die selbst&shy;definierte
+      An&shy;weisung zum Um&shy;gehen einer Maschine an&shy;gepasst werden.
+    </p>
+
+    <br />
+    <p>Teste dein Programm mit folgenden drei Welten:</p>
+    <ul>
+      <li>
+        <a href="./welten/maschinenhalle_komplexer_1.kdw"
+          >maschinenhalle_komplexer_1</a
+        >
+      </li>
+      <li>
+        <a href="./welten/maschinenhalle_komplexer_2.kdw"
+          >maschinenhalle_komplexer_2</a
+        >
+      </li>
+      <li>
+        <a href="./welten/maschinenhalle_komplexer_3.kdw"
+          >maschinenhalle_komplexer_3</a
+        >
+      </li>
+    </ul>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/10_maschinenhalle_komplexer.png"
+        alt=""
+        border="0"
+        width="400"
+        height="370"
+        loading="lazy"
+      />
+    </center>
+  </article>
+</BaseLayout>

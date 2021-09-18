@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="3. Schleifen"
+  previous="/02-das-erste-programm"
+  next="/04-anweisungen"
+>
+  <p>
+    Man kann mit Schleifen den Programm&shy;code deutlich verk&uuml;rzen und
+    auch lesbar&shy;er gestalten. Der Programm&shy;code f&uuml;r Aufgabe 1 ist
+    sicherlich sehr lang und un&uuml;bersichtlich. Eine Schleife ist recht
+    einfach zu handhaben und sieht folgenderma&szlig;en aus:
+  </p>
+
+  <pre>
+    <code>
+    Wiederhole n mal<br />
+    &nbsp; &nbsp; &lt;Anweisung&gt;<br />
+    *Wiederhole<br />
+    </code>
+  </pre>
+
+  <p>
+    <kbd>n</kbd> steht hierbei f&uuml;r die Anzahl der Wieder&shy;holungen.
+    Alles was zwischen <kbd>Wiederhole</kbd> und <kbd>*Wiederhole</kbd> steht
+    wird ent&shy;sprechend oft wieder&shy;holt.
+  </p>
+
+  <article>
+    <header><b>&Uuml;bung:</b></header>
+    <p>Probiere was nachfolgender Programm&shy;code bewirkt!</p>
+    <pre>
+          <code>
+            Wiederhole 5 mal<br />
+            &nbsp; &nbsp; Hinlegen<br />
+            &nbsp; &nbsp; Schritt<br />
+            *Wiederhole<br />
+          </code>
+        </pre>
+  </article>
+
+  <article>
+    <header><b>Aufgabe 3:</b></header>
+    <p>
+      Schreibe ein Programm, dass nach dem Ausf&uuml;hren in einer
+      <b>neuen</b> Welt den gesamten Boden mit Ziegeln bedeckt. Der Ort an dem
+      Karol zum Stehen kommt, ist unwichtig.
+    </p>
+    <p>
+      Verwende hierbei <b>Schleifen</b> um den Code deutlich k&uuml;rzer und
+      &uuml;ber&shy;sichtlicher zu gestalten. Der gesamte Programm&shy;code
+      sollte <b>60 Zeilen</b> nicht &uuml;ber&shy;schreiten (bei einer Anweisung
+      pro Zeile).
+    </p>
+    <br />
+    <center>
+      <img
+        src="/images/aufgabe_01.png"
+        alt=""
+        width="330"
+        height="285"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <!-- Einbindung des Youtube-Videos  -->
+  <center>
+    <iframe
+      title="YouTube Video"
+      loading="lazy"
+      width="720"
+      height="380"
+      src="https://www.youtube.com/embed/mNs-agKPUrE"
+      allowfullscreen
+    ></iframe>
+  </center>
+
+  <p align="center">
+    <i>
+      Das Video kann zu Hause an&shy;geschaut werden (dann mit Ton), muss aber
+      nicht.
+    </i>
+  </p>
+</BaseLayout>

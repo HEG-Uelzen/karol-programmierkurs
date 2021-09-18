@@ -1,0 +1,285 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout
+  title="5. Bedingungen"
+  previous="/04-anweisungen"
+  next="/06-eigene-bedingungen"
+>
+  <p>
+    Bislang konnte Karol nicht auf seine Umwelt reagieren, d.h. er wusste nicht,
+    ob er vor einer Wand, einem Zie&shy;gel oder auf einer Marke steht. Um
+    dieses fest&shy;zu&shy;stellen ben&ouml;tigt er Be&shy;dingungen. Mithilfe
+    dieser kann er seine Welt selbst erkunden. Im Folgend&shy;en werden einige
+    Be&shy;dingungen auf&shy;gef&uuml;hrt:
+  </p>
+
+  <h2>istWand</h2>
+  Mit dieser Beding&shy;ung kann Karol feststellen, ob sich vor ihm eine Wand
+  (oder auch Quader) befindet.
+
+  <h2>istZiegel</h2>
+  Mit dieser Beding&shy;ung erf&auml;hrt Karol, ob sich vor ihm mindestens ein
+  Ziegel&shy;stein befindet.
+
+  <h2>istMarke</h2>
+  Mit dieser Bedingung kann Karol fest&shy;stellen, ob er sich auf einer
+  Markier&shy;ung befindet.
+
+  <br /><br />
+
+  <p>
+    Jede dieser Beding&shy;ungen gibt es ebenfalls noch in einer ver&shy;neinten
+    Version mit der Vor&shy;silbe "Nicht", also <kbd>NichtIstWand</kbd>,
+    <kbd>NichtIstZiegel</kbd> und <kbd>NichtIstMarke</kbd>.
+  </p>
+  <p>
+    Um mit diesen Be&shy;dingungen arbeiten zu k&ouml;nnen, ben&ouml;tigt Karol
+    noch neue Befehle. Ein wichtiger Befehl lautet z.B.:
+  </p>
+
+  <pre>
+		 <code>
+		 solange &lt;Bedingung&gt; tue<br/>
+		 &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
+		 *solange<br/>
+		 </code>
+	 </pre>
+
+  <article>
+    <header><b>&Uuml;bung:</b></header>
+    <section>
+      <p>Probiere folgenden Programm&shy;code aus:</p>
+      <pre>
+	<code>
+	solange NichtIstWand tue<br/>
+	&nbsp; &nbsp; Schritt<br/>
+	*solange<br/>
+	</code>
+  </pre>
+    </section>
+  </article>
+
+  <article>
+    <header><b>Hilfe:</b></header>
+    <p>
+      Im Folgenden wird verlangt, dass du dein Programm mit verschiedenen Welten
+      ausprobierst. Gehe hierzu folgender&shy;ma&szlig;en vor:
+    </p>
+    <ol>
+      <li>
+        Dr&uuml;cke im Browser mit der rechten Maus&shy;taste auf den
+        entsprechenden Link und w&auml;hle "Ziel speichern unter..." aus.
+      </li>
+      <li>
+        Anschlie&szlig;end w&auml;hlst du bei Karol im Menu den Eintrag "Welt /
+        &Ouml;ffnen Welt..." aus.
+      </li>
+    </ol>
+    <center>
+      <img
+        src="/images/15_welt_speichern.png"
+        alt=""
+        border="0"
+        width="581"
+        height="489"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br /><br /><br />
+
+  <article>
+    <header><b>Aufgabe 6:</b></header>
+    <p>
+      Bisher hat Robot Karol nur Regale mit vier F&auml;chern best&uuml;ckt.
+      F&uuml;r jede andere Regalgr&ouml;&szlig;e m&uuml;sste man ein neues
+      Programm schreiben. Besser w&auml;re eine Anweisung: "Best&uuml;cke die
+      F&auml;cher solange, bis das Regal zuende ist!"
+    </p>
+    <p>
+      Zun&auml;chst muss Karol das Ende des Regals er&shy;kennen k&ouml;nnen.
+      Dazu setzt man hinter das letzte Fach eine Marke.
+    </p>
+    <p>
+      &Auml;ndere das B&uuml;cherei&shy;programm so, dass Robot Karol Regale
+      beliebiger Gr&ouml;&szlig;e best&uuml;cken kann.
+    </p>
+    <p>Teste dein Programm mit folgenden drei Welten:</p>
+    <ul>
+      <li><a href="./welten/buecherei_1.kdw">buecherei_1</a></li>
+      <li><a href="./welten/buecherei_2.kdw">buecherei_2</a></li>
+      <li><a href="./welten/buecherei_3.kdw">buecherei_3</a></li>
+    </ul>
+    <p>
+      <i>
+        Zum Herunterladen einfach eine der Welten mit der rechten Maustaste
+        ausw&auml;hlen und anschlie&szlig;end "Ziel speichern unter..."
+        anw&auml;hlen. Dann noch das eigene Verzeichnis aussuchen und speichern.
+      </i>
+    </p>
+    <br />
+    <center>
+      <img
+        src="/images/05_buecherei_komplex.png"
+        alt=""
+        border="0"
+        width="198"
+        height="339"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <p>
+    Eine andere Anweisung, um eine Bedingung zu &uuml;berpr&uuml;fen lautet
+    folgenderma&szlig;en:
+  </p>
+
+  <pre>
+         <code>
+             wenn &lt;Bedingung&gt; dann<br/>
+             &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
+             *wenn<br/>
+         </code>
+     </pre>
+
+  <p>
+    Diese Anweisung wird im Gegen&shy;satz zu <kbd>wiederhole solange</kbd> nur
+    genau einmal aus&shy;ge&shy;f&uuml;hrt.
+  </p>
+
+  <article>
+    <header><b>&Uuml;bung:</b></header>
+    <section>
+      <p>Probiere folgenden Programm&shy;code aus:</p>
+      <pre>
+			<code>
+			solange NichtIstWand tue<br/>
+			&nbsp; &nbsp;Schritt<br/>
+			&nbsp; &nbsp;wenn istZiegel dann<br />
+			&nbsp; &nbsp;&nbsp; &nbsp; aufheben<br />
+			&nbsp; &nbsp;*wenn<br />
+			*solange<br/>
+			</code>
+			</pre>
+    </section>
+
+    <br />
+    <center>
+      <img
+        src="/images/06_aufsammeln_ziegel.png"
+        alt=""
+        border="0"
+        width="376"
+        height="378"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <article>
+    <header><b>Aufgabe 7:</b></header>
+    <p>
+      Karol ist wieder in der B&uuml;cherei zum Einr&auml;umen der B&uuml;cher.
+      Dieses Mal kann es jedoch sein, dass sich be&shy;reits ein Buch in einem
+      Re&shy;gal be&shy;findet. Dann soll er <b>keines</b> dazu&shy;legen.
+      Ver&shy;bessere den Programm&shy;code der letzten Auf&shy;gabe, so dass
+      sich am Ende immer nur ein Buch in jedem Regal befindet.
+    </p>
+    <p>Teste dein Programm mit folgenden drei Welten:</p>
+    <ul>
+      <li>
+        <a href="./welten/buecherei_komplexer_1.kdw">buecherei_komplexer_1</a>
+      </li>
+      <li>
+        <a href="./welten/buecherei_komplexer_2.kdw">buecherei_komplexer_2</a>
+      </li>
+      <li>
+        <a href="./welten/buecherei_komplexer_3.kdw">buecherei_komplexer_3</a>
+      </li>
+    </ul>
+
+    <br />
+    <center>
+      <img
+        src="/images/07_buecherei_komplexer.png"
+        alt=""
+        border="0"
+        width="198"
+        height="339"
+        loading="lazy"
+      />
+    </center>
+  </article>
+
+  <br />
+
+  <p>
+    Die <kbd>wenn</kbd>-Anweisung gibt es auch in einer komplex&shy;eren
+    Version. Sie lautet dann:
+  </p>
+  <pre>
+         <code>
+         wenn &lt;Bedingung&gt; dann<br/>
+         &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
+         sonst<br/>
+         &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
+         *wenn
+         </code>
+     </pre>
+
+  <p>
+    Diese bedingte An&shy;weisung l&auml;sst eine Ent&shy;scheidung zwischen
+    zwei M&ouml;glich&shy;keiten zu.
+  </p>
+
+  <br />
+
+  <article>
+    <header>
+      <b>Aufgabe 8:</b>
+    </header>
+    <p>
+      Der Meister hat in der Maschinen&shy;halle sein Handy verloren. Robot
+      Karol soll es suchen und einstecken. Auf der Suche stehen ihm jedoch immer
+      wieder Maschinen im Weg. Das Handy kann auch zwischen den Maschinen auf
+      der linken Seite liegen.
+    </p>
+    <p>
+      Robot Karol muss also entweder eine Maschine umgehen oder einfach einen
+      Schritt vorw&auml;rts gehen. Hier ben&ouml;tigt man eine bedingte
+      Anweisung, die eine Ent&shy;scheidung zwischen zwei M&ouml;glichkeiten
+      zul&auml;sst (s.o.).<br />
+      Schreibe ein Programm, das Robot Karol das Handy finden l&auml;sst.
+      Verwende Programm&shy;schleifen und eigene Anweisungen (z.B. f&uuml;r das
+      Umgehen eines Hinder&shy;nisses). Variiere das Aussehen der
+      Maschinen&shy;halle.
+    </p>
+    <p>Teste dein Programm mit folgenden drei Welten:</p>
+    <ul>
+      <li><a href="./welten/maschinenhalle_1.kdw">maschinenhalle_1</a></li>
+      <li><a href="./welten/maschinenhalle_2.kdw">maschinenhalle_2</a></li>
+      <li><a href="./welten/maschinenhalle_3.kdw">maschinenhalle_3</a></li>
+    </ul>
+
+    <br />
+
+    <center>
+      <img
+        src="/images/08_maschinenhalle.png"
+        alt=""
+        border="0"
+        width="384"
+        height="375"
+        loading="lazy"
+      />
+    </center>
+  </article>
+</BaseLayout>
