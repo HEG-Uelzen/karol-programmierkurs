@@ -41,9 +41,9 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 
   <pre>
 		 <code>
-		 solange &lt;Bedingung&gt; tue<br/>
+		 <i>solange</i><em> &lt;Bedingung&gt; </em><i>tue</i><br/>
 		 &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
-		 *solange<br/>
+		 *<i>solange</i><br/>
 		 </code>
 	 </pre>
 
@@ -53,9 +53,9 @@ import BaseLayout from "../layouts/BaseLayout.astro"
       <p>Probiere folgenden Programm&shy;code aus:</p>
       <pre>
 	<code>
-	solange NichtIstWand tue<br/>
+	<i>solange</i><em> NichtIstWand </em><i>tue</i><br/>
 	&nbsp; &nbsp; Schritt<br/>
-	*solange<br/>
+	*<i>solange</i><br/>
 	</code>
   </pre>
     </section>
@@ -141,12 +141,12 @@ import BaseLayout from "../layouts/BaseLayout.astro"
   </p>
 
   <pre>
-         <code>
-             wenn &lt;Bedingung&gt; dann<br/>
-             &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
-             *wenn<br/>
-         </code>
-     </pre>
+  <code>
+      <i>wenn</i><em> &lt;Bedingung&gt; </em><i>dann</i><br/>
+      &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
+      *<i>wenn</i><br/>
+  </code>
+  </pre>
 
   <p>
     Diese Anweisung wird im Gegen&shy;satz zu <kbd>wiederhole solange</kbd> nur
@@ -159,12 +159,12 @@ import BaseLayout from "../layouts/BaseLayout.astro"
       <p>Probiere folgenden Programm&shy;code aus:</p>
       <pre>
 			<code>
-			solange NichtIstWand tue<br/>
+			<i>solange</i><em> NichtIstWand </em>tue<br/>
 			&nbsp; &nbsp;Schritt<br/>
-			&nbsp; &nbsp;wenn istZiegel dann<br />
+			&nbsp; &nbsp;<i>wenn</i><em> istZiegel </em><i>dann</i><br />
 			&nbsp; &nbsp;&nbsp; &nbsp; aufheben<br />
-			&nbsp; &nbsp;*wenn<br />
-			*solange<br/>
+			&nbsp; &nbsp;*<i>wenn</i><br />
+			*<i>solange</i><br/>
 			</code>
 			</pre>
     </section>
@@ -227,11 +227,11 @@ import BaseLayout from "../layouts/BaseLayout.astro"
   </p>
   <pre>
          <code>
-         wenn &lt;Bedingung&gt; dann<br/>
-         &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
-         sonst<br/>
-         &nbsp; &nbsp; &lt;Anweisungsfolge&gt;<br/>
-         *wenn
+         <i>wenn</i><em> &lt;Bedingung&gt; </em><i>dann</i>
+         &nbsp; &nbsp; &lt;Anweisungsfolge&gt;
+         <i>sonst</i>
+         &nbsp; &nbsp; &lt;Anweisungsfolge&gt;
+         *<i>wenn</i>
          </code>
      </pre>
 
