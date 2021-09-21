@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 8
       - run: npm install -g surge
-      - run: npm install
-      - run: npm run build
+      - run: npm install --ignore-scripts
+      - run: npm run build --ignore-scripts
       - run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
 
