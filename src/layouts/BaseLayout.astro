@@ -78,37 +78,52 @@ let {next} = Astro.props;
     </main>
 
     <!--Footer-->
-    <footer class="container">
-      <a href="{previous}" aria-label="previous page">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+    <footer class="grid container">
+      <div>
+        <a href="{previous}" aria-label="previous page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M0 0h24v24H0z" stroke="none" />
+            <path d="m15 6-6 6 6 6" />
+          </svg>
+        </a>
+        <a href="{next}" aria-label="next page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M0 0h24v24H0z" stroke="none" />
+            <path d="m9 6 6 6-6 6" />
+          </svg>
+        </a>
+      </div>
+      <div>
+        <small
+          >Basiert auf
+          <q
+            ><a
+              href="https://de.wikibooks.org/wiki/Mini-Languages:_Programmierung_von_Robot_Karol"
+              target="_blank"
+              rel="noopener"
+              >Mini-Languages: Programmierung von Robot Karol</a
+            ></q
+          ></small
         >
-          <path d="M0 0h24v24H0z" stroke="none" />
-          <path d="m15 6-6 6 6 6" />
-        </svg>
-      </a>
-      <a href="{next}" aria-label="next page">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M0 0h24v24H0z" stroke="none" />
-          <path d="m9 6 6 6-6 6" />
-        </svg>
-      </a>
+      </div>
     </footer>
   </body>
 </html>
