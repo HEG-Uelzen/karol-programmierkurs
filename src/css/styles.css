@@ -13,3 +13,43 @@
 iframe {
   margin-bottom: 0.8rem;
 }
+
+:root {
+  --excercise-light: #fde047;
+  --excercise-dark: #fb923c;
+  --border-light: #f59e0b;
+  --dark-text-color: #f4f4f5;
+}
+article.aufgabe {
+  background: var(--excercise-light);
+}
+
+article.aufgabe > header {
+  background: var(--excercise-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  article.aufgabe {
+    background: var(--excercise-dark);
+    color: var(--dark-text-color);
+  }
+  article.aufgabe > header {
+    background: var(--excercise-dark);
+    color: var(--dark-text-color);
+  }
+  article.aufgabe > p {
+    color: var(--dark-text-color);
+  }
+
+  article.aufgabe > details > summary {
+    color: #e0f2fe;
+  }
+  article.aufgabe > details > p {
+    color: var(--dark-text-color);
+  }
+
+  article.aufgabe > ul > li > a {
+    color: #e0f2fe;
+  }
+}
